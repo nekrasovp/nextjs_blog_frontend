@@ -1,19 +1,28 @@
 {
-  "name": "frontend",
+  "name": "blog-frontend",
+  "description": "Next.js blog frontend",
+  "keywords": [],
+  "author": "Pavel Nekrasov",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "docker-build": "docker build -t nextjs-docker .",
+    "docker-run": "docker run -p 3000:3000 nextjs-docker"
   },
   "dependencies": {
     "@next/font": "13.1.1",
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.10",
     "eslint": "8.31.0",
     "eslint-config-next": "13.1.1",
     "next": "13.1.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-markdown": "^8.0.4",
+    "react-moment": "^1.1.2"
   }
 }
