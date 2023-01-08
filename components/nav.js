@@ -4,7 +4,7 @@ import Link from "next/link";
 const Nav = ({ categories }) => {
   return (
     <div>
-      <nav className="uk-navbar-container">
+      <nav className="uk-navbar-container" uk-navbar="true">
         <div className="uk-navbar-left">
           <ul className="uk-navbar-nav">
             <li>
