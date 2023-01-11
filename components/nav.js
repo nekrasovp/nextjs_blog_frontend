@@ -2,6 +2,11 @@ import React from "react";
 import Link from "next/link";
 
 const Nav = ({ categories }) => {
+  const locale = "en";
+  function setLang() {
+    console.log(window.locales.value)
+  }
+
   return (
     <div>
       <nav className="uk-navbar-container" uk-navbar="true">
@@ -11,6 +16,19 @@ const Nav = ({ categories }) => {
               <Link href="/">
                 Blog
               </Link>
+            </li>
+          </ul>
+          <ul className="uk-navbar-nav">
+            <li>
+              <select
+                name="locales"
+                id="locales"
+                onChange={setLang}
+                value={locale}
+              >
+                <option value="en">English</option>
+                <option value="ru">Русский</option>
+              </select>
             </li>
           </ul>
         </div>
